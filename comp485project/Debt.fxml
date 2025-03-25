@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: 000000;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp485project.DebtController">
+   <children>
+      <Button fx:id="toDashboard" layoutX="34.0" layoutY="47.0" mnemonicParsing="false" onAction="#switchToDashboard" text="Back to Dashboard">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Button>
+      <Text layoutX="366.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Debt">
+         <font>
+            <Font name="Times New Roman" size="35.0" />
+         </font>
+      </Text>
+      <Button fx:id="editDebt" layoutX="622.0" layoutY="157.0" mnemonicParsing="false" text="Edit Debt">
+         <font>
+            <Font name="Times New Roman" size="16.0" />
+         </font>
+      </Button>
+      <ProgressBar fx:id="debtProgress" layoutX="366.0" layoutY="446.0" prefHeight="30.0" prefWidth="335.0" progress="0.0" />
+      <Text layoutX="186.0" layoutY="469.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Debt Progress">
+         <font>
+            <Font name="Times New Roman" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="debtOwed" layoutX="145.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Debt Owed">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="interestOfDebt" layoutX="441.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Interest Percentage">
+         <font>
+            <Font name="Times New Roman" size="28.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>
