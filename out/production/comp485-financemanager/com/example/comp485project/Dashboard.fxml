@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.comp485project.DashboardController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <ButtonBar layoutX="11.0" layoutY="55.0" prefHeight="40.0" prefWidth="778.0">
+        <buttons>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Dashboard" wrappingWidth="155.73672103881836">
+               <font>
+                  <Font name="Times New Roman Bold" size="20.0" />
+               </font>
+            </Text>
+            <Button fx:id="incomeButton" mnemonicParsing="false" onAction="#switchToIncome" text="Income">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+            <Button fx:id="debtButton" mnemonicParsing="false" onAction="#switchToDebt" text="Debt">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+            <Button fx:id="expensesButton" mnemonicParsing="false" onAction="#switchToExpense" text="Expenses">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+          <Button fx:id="savingsButton" mnemonicParsing="false" onAction="#switchToSavings" text="Savings">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+            <Button fx:id="reportsButton" mnemonicParsing="false" onAction="#switchToReports" text="Reports">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+            <Button fx:id="accountButton" mnemonicParsing="false" onAction="#switchToAccount" text="Account">
+               <font>
+                  <Font name="Times New Roman" size="16.0" />
+               </font></Button>
+        </buttons>
+      </ButtonBar>
+      <TabPane layoutX="23.0" layoutY="100.0" prefHeight="485.0" prefWidth="754.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Overview">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="450.0" prefWidth="754.0">
+                     <children>
+                        <Pane layoutX="14.0" layoutY="14.0" prefHeight="169.0" prefWidth="298.0">
+                           <children>
+                              <Text layoutX="109.0" layoutY="62.0" strokeType="OUTSIDE" strokeWidth="0.0" text="income" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="14.0" layoutY="255.0" prefHeight="169.0" prefWidth="298.0">
+                           <children>
+                              <Text layoutX="127.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="debt" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="426.0" layoutY="255.0" prefHeight="169.0" prefWidth="298.0">
+                           <children>
+                              <Text layoutX="127.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="expenses" />
+                           </children>
+                        </Pane>
+                        <Pane layoutX="426.0" layoutY="14.0" prefHeight="169.0" prefWidth="298.0">
+                           <children>
+                              <Text layoutX="127.0" layoutY="89.0" strokeType="OUTSIDE" strokeWidth="0.0" text="savings" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
