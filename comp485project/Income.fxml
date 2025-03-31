@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
@@ -23,34 +24,33 @@
          <children>
             <AnchorPane prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: blue;">
                <children>
-                  <Text layoutX="83.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Source">
+                  <Text fx:id="incomeSourceDisplay" layoutX="50.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Source">
                      <font>
-                        <Font name="Times New Roman" size="20.0" />
+                        <Font name="Times New Roman" size="18.0" />
                      </font>
                   </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="300.0" prefWidth="248.0" style="-fx-border-color: blue;">
-               <children>
-                  <Text layoutX="79.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary">
+                  <Text fx:id="incomeSalaryDisplay" layoutX="50.0" layoutY="90.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Salary">
                      <font>
-                        <Font name="Times New Roman" size="20.0" />
+                        <Font name="Times New Roman" size="18.0" />
                      </font>
                   </Text>
-               </children>
-            </AnchorPane>
-            <AnchorPane prefHeight="300.0" prefWidth="306.0" style="-fx-border-color: blue;">
-               <children>
-                  <Text layoutX="74.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay Frequency">
+                  <Text fx:id="incomePayFrequencyDisplay" layoutX="50.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pay Frequency">
                      <font>
-                        <Font name="Times New Roman" size="20.0" />
+                        <Font name="Times New Roman" size="18.0" />
                      </font>
                   </Text>
                </children>
             </AnchorPane>
          </children>
       </HBox>
-      <Button fx:id="editIncome" layoutX="650.0" layoutY="169.0" mnemonicParsing="false" text="Edit Income">
+
+      <!-- Text fields for input -->
+      <TextField fx:id="sourceField" layoutX="330" layoutY="230" promptText="Enter Source" />
+      <TextField fx:id="salaryField" layoutX="330" layoutY="280" promptText="Enter Salary" />
+      <TextField fx:id="payFrequencyField" layoutX="330" layoutY="330" promptText="Enter Pay Frequency" />
+
+      <!-- Save button -->
+      <Button fx:id="saveIncome" layoutX="650.0" layoutY="210.0" mnemonicParsing="false" onAction="#saveIncome" text="Save Income">
          <font>
             <Font name="Times New Roman" size="16.0" />
          </font>

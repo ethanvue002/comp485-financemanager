@@ -39,8 +39,6 @@ public class DebtController {
         primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         primaryStage.setScene(scene);
-        primaryStage.show();
-
     }
 
 }

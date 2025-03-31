@@ -31,7 +31,7 @@ public class SavingsController {
         root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
         primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
-        primaryStage.show();
+        primaryStage.setScene(scene);
     }
 
 }

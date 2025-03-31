@@ -58,11 +58,12 @@ public class CreateAccountController {
             showAlert("All fields must be filled!");
             return;
         }
-        if (!inputPass.equals(inputPassAgain.getText())) {
-            showAlert("Passwords do not match!");
-            return;
+        if (!password.equals(confirmPassword)) {
+            {
+                showAlert("Passwords do not match!");
+                return;
+            }
         }
-
 
 
         String sql = "INSERT INTO users (username, email, phone_number, name, password) VALUES (?, ?, ?, ?, ?)";

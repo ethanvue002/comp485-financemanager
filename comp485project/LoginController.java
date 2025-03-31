@@ -38,6 +38,7 @@ public class LoginController {
     @FXML
     private TextField usernameInput;
 
+    public static String loggedInUsername = "";
 
     public void login(ActionEvent event) {
         // Get user input and trim whitespace
@@ -61,6 +62,7 @@ public class LoginController {
             ResultSet rs = stmt.executeQuery();
 
             if (rs.next()) {
+                loggedInUsername = username;
                 showAlert("Login successful!");
 
                 switchToDashboard(event);
@@ -85,12 +87,14 @@ public class LoginController {
 
     @FXML
     public void switchToDashboard(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Dashboard.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("Dashboard.fxml"));
+        root = loader.load();
+        DashboardController dashboardController = loader.getController();
+        dashboardController.setLoggedInUsername(loggedInUsername);
         primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
     @FXML

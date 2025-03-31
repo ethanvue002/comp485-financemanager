@@ -35,6 +35,13 @@ public class DashboardController {
     @FXML
     private Button savingsButton;
 
+    private String loggedInUsername;
+
+    // Create a setter method to receive the username
+    public void setLoggedInUsername(String username) {
+        this.loggedInUsername = username;
+    }
+
     @FXML
     public void switchToAccount(ActionEvent event) throws IOException {
         root = FXMLLoader.load(getClass().getResource("Account.fxml"));
