@@ -38,15 +38,5 @@
             <Font name="Times New Roman" size="25.0" />
          </font>
       </Text>
-      <Button fx:id="changePassword" layoutX="323.0" layoutY="430.0" mnemonicParsing="false" text="Change Password">
-         <font>
-            <Font name="Times New Roman" size="18.0" />
-         </font>
-      </Button>
-      <Button fx:id="deleteAccount" layoutX="36.0" layoutY="501.0" mnemonicParsing="false" text="Delete Account" textFill="#df1b1b">
-         <font>
-            <Font name="Times New Roman" size="18.0" />
-         </font>
-      </Button>
    </children>
 </AnchorPane>

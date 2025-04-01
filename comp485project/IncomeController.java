@@ -3,6 +3,7 @@ package com.example.comp485project;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,7 +18,10 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.math.BigDecimal;
 import javafx.scene.text.Text;
-public class IncomeController {
+import javafx.fxml.Initializable;
+import java.net.URL;
+import java.util.ResourceBundle;
+public class IncomeController implements Initializable {
     private Stage primaryStage;
     private Scene scene;
     private Parent root;
@@ -44,6 +48,11 @@ public class IncomeController {
 
     @FXML
     private Button saveIncomeButton;
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        displayIncomeData(); // Load data when the page initializes
+    }
 
     public void displayIncomeData() {
         String username = LoginController.loggedInUsername;

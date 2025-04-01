@@ -65,6 +65,7 @@ public class LoginController {
                 loggedInUsername = username;
                 showAlert("Login successful!");
 
+                SessionManager.setUsername(username);
                 switchToDashboard(event);
             } else {
                 showAlert("Invalid username or password.");
@@ -79,11 +80,12 @@ public class LoginController {
     }
     private void showAlert(String message) {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle("Input Error");
+        alert.setTitle("Important");
         alert.setHeaderText(null);
         alert.setContentText(message);
         alert.showAndWait();
     }
+
 
     @FXML
     public void switchToDashboard(ActionEvent event) throws IOException {
